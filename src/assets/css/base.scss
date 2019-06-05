@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  color:inherit;
+  &.link{
+    color: #20a0ff;
+    cursor: pointer;
+  }
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+html,
+body,
+#app{
+  width:100%;
+  height:100%;
+}
+#app{
+  // overflow-y: scroll;
+}
+html {
+  font-size: 625%;
+}
+body {
+  margin: auto;
+  min-width: 3.2rem;
+  color: #3f3f3f;
+  background-color: #EFF0F4;
+  font-family: "Microsoft YaHei", "Arial";
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+  font-size: 0.13rem;
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input,
+button {
+  appearance: none;
+  outline: none;
+  border:1px solid transparent;
+}
+button{
+  cursor: pointer;
+  outline: none;
+}
+
+/*公共基础*/
+.f-tal {
+  text-align: left;
+}
+.f-tar {
+  text-align: right;
+}
+.f-tac{
+  text-align: center;
+}
+.f-scroll-lt{
+  overflow-y: scroll;
+}
+.f-fs-12{
+  font-size: 0.12rem;
+}
+.f-fs-16{
+  font-size: 0.16rem;
+}
+.f-fs-18{
+  font-size: 0.18rem;
+}
+.f-wb{
+  font-weight: bold;
+}
+.f-tdl{
+  text-decoration: line-through;
+}
+.f-tdu{
+  text-decoration: underline;
+}
+.f-mt-10{
+  margin-top: 0.1rem;
+}
+.f-mb-10{
+  margin-bottom: 0.1rem;
+}
+.f-mb-20{
+  margin-bottom: 0.2rem;
+}
+.f-mr-10{
+  margin-right: 0.1rem;
+}
+.f-mr-20{
+  margin-right: 0.2rem;
+}
+.f-tbs-mtb{
+  margin: 5px 0;
+}
+.f-w-1200{
+  width: 12rem;
+  margin: auto;
+}
+.f-mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+.f-inline-block{
+  display: inline-block;
+}
+.f-no-data{
+  margin-top: 0.3rem;
+  padding: 0.6rem 0 0.3rem 0;
+  text-align: center;
+  color: #b3b2b2;
+  font-size: 0.14rem;
+  letter-spacing: 2px;
+  background-image: url(../../assets/images/no-data.png);
+  background-repeat: no-repeat;
+  background-position:center top;
+}
+.clr:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.red {
+  color: #E13722;
+}
+.blue {
+  color: #2d8cf0
+}
+.green {
+  color: #13ce66;
+}
+.yellow {
+  color: #F17746;
+}
+.grey {
+  color: #b3b2b2;
+}
+.grey-deep{
+  color: #8b8e94;
+}
+.black{
+  color: #333;
+}
+.white{
+  color: #fff;
+}
+.purple {
+  color: #4b3887;
+}
+.purple-lt {
+  color: #647BEB;
+}
+.bg-grey{
+  background-color: #f8f8f9
+}
+.bg-white{
+  background-color: #FFF;
+}
+.bg-yellow{
+  background-color: #ffc333;
+}
+.bg-green{
+  background-color: #49D292;
+}
+.bg-red{
+  background-color: #E94546;
+}
+.bg-blue{
+  background-color: #20A0FF;
+}
+/*图标*/
+[class*=" u-icon"],
+[class^="u-icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  vertical-align: middle;
+}
+/*布局*/
+
+/*平分*/
+.f-flex-row{
+  display: flex;
+  align-items: center;
+  >.row{
+    flex: 1;
+  }
+}
+/*左固定，右自适应*/
+.f-flex-lr{
+  display: flex;
+  align-items: center;
+  >.lt{
+    
+  }
+  >.rt{
+    flex: 1;
+  }
+}
+
+/*scroll bar*/
+
+/*滚动条整体部分*/
+.f-scroll-lt::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/*滚动条两端的按钮*/
+.f-scroll-lt::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+/*外层轨道*/
+.f-scroll-lt::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*内层轨道*/
+.f-scroll-lt::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+/*滚动条里面可以拖动的那部分*/
+.f-scroll-lt::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*定义右下角拖动块的样式*/
+.f-scroll-lt::-webkit-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*加载*/
+
+@keyframes loadingRotate {
+  0%{
+      transform: rotate(0deg)
+  }
+  100%{
+      transform: rotate(360deg)
+  }
+}
+
+
+/*表格*/
+.f-table-base{
+  width: 100%;
+  word-break:break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  table-layout:fixed;
+  border-spacing:0px;
+  border-collapse: collapse;
+  background-color: transparent;
+  text-align: center;
+  font-size: 0.13rem;
+}
+.f-tb-none{
+  position: relative;
+  padding: 0.2rem;
+  background-color:#f8f8f8;
+  color: #717171;
+  text-align: center;
+}
+
+/*自定义*/
